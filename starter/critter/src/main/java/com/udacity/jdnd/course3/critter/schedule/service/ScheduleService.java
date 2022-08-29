@@ -12,6 +12,7 @@ import com.udacity.jdnd.course3.critter.user.modelo.Employee;
 import com.udacity.jdnd.course3.critter.user.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
  * Handles web requests related to Schedules.
  */
 @Service
+@Transactional
 public class ScheduleService {
     @Autowired
     private ScheduleRepository repository;

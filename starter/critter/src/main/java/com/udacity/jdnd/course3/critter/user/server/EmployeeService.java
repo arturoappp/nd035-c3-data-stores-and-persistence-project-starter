@@ -8,6 +8,7 @@ import com.udacity.jdnd.course3.critter.user.repository.EmployeeRepository;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.DayOfWeek;
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
  * would be fine too, though that is not part of the required scope for this class.
  */
 @Service
+@Transactional
 public class EmployeeService {
 
     @Autowired
